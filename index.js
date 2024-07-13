@@ -56,21 +56,21 @@ function display(event) {
     // Displaying user chosen image
     let toDisplay1 = document.getElementById("blue");
     if (targetId === "1") {
-        toDisplay1.src = "./Photos/rock.png";
+        toDisplay1.src = "./rock.png";
     } else if (targetId === "2") {
-        toDisplay1.src = "./Photos/paper.png";
+        toDisplay1.src = "./paper.png";
     } else {
-        toDisplay1.src = "./Photos/scissor.png";
+        toDisplay1.src = "./scissor.png";
     }
 
     // Displaying randomly generated image
     let toDisplay2 = document.getElementById("red");
     if (rand === 1) {
-        toDisplay2.src = "./Photos/rock.png";
+        toDisplay2.src = "./rock.png";
     } else if (rand === 2) {
-        toDisplay2.src = "./Photos/paper.png";
+        toDisplay2.src = "./paper.png";
     } else {
-        toDisplay2.src = "./Photos/scissor.png";
+        toDisplay2.src = "./scissor.png";
     }
 
     // Displaying both the images into the blocks
