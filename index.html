@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="icon" href="./Photos/logo.png" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Noto Sans", sans-serif;
+            font-weight: 300;
+            color: white;
+            margin: 0px;
+            background-color: black;
+            letter-spacing: 2px;
+        }
+
+        .fpage {
+            height: 60vh;
+            /* this */
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fpage-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 20vh;
+            width: 100%;
+            /* border: 1px solid white; */
+        }
+
+        .logo {
+            /* border: 1px solid green; */
+            width: 140px;
+            height: 140px;
+        }
+
+        .sec-cont {
+            display: flex;
+            /* this */
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        #input {
+            height: 40px;
+            width: 250px;
+            border-radius: 20px 0px 0px 20px;
+            border: 1px solid white;
+            margin: 30px 0px 0px 0px;
+            color: black;
+            padding: 0px 0px 0px 15px;
+            font-weight: 500;
+            font-size: 20px;
+            border-right: none;
+            background-color: white;
+        }
+
+        ::placeholder {
+            font-size: 20px;
+            color: grey;
+            font-weight: 300;
+        }
+
+        .start-btn {
+            border: 1px solid white;
+            border-radius: 0px 20px 20px 0px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            width: 80px;
+            height: 40px;
+            font-size: 20px;
+            margin-left: -6px;
+        }
+
+        .start-btn:hover {
+            background-color: rgb(27, 27, 27);
+            cursor: pointer;
+        }
+
+        .third-cont {
+            display: none;
+            /* this */
+            height: 80vh;
+            flex-direction: column;
+        }
+
+        .match {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 40%;
+            flex-grow: 3;
+        }
+
+        .match-items {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            flex-direction: column;
+            /* border: 1px solid green; */
+            width: 33.33333%;
+        }
+
+        .choices {
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
+        .user-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            font-size: 20px;
+            margin: 20px 0px 20px 0px;
+        }
+
+        .cont1,
+        .cont2 {
+            border-radius: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 60%;
+            background-color: blue;
+            height: 65%;
+            width: 50%;
+        }
+
+        .cont2 {
+            background-color: red;
+        }
+
+        img {
+            background-color: transparent;
+            height: 60px;
+            width: 60px;
+        }
+
+        .result {
+            display: block;
+            height: 100px;
+            width: 100px;
+        }
+
+        .blue {
+            align-items: end;
+        }
+
+        .red {
+            align-items: start;
+        }
+
+        .mid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: baseline;
+        }
+
+        .mid>img {
+            display: block;
+            margin-top: 100px;
+        }
+
+        .temp {
+            /* border: 1px solid gold; */
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-around; */
+            align-items: center;
+        }
+
+        .title {
+            margin-top: -15px;
+        }
+
+        .rounds {
+            width: fit-content;
+            margin: 10px;
+            border: 1px solid white;
+            padding: 10px 20px 10px 20px;
+            font-weight: 700;
+            border-radius: 50px;
+            background-color: white;
+            color: black;
+        }
+
+        .choice-items {
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+            background-color: green;
+            border-radius: 36px;
+            border: 1px solid green;
+            padding: 15px;
+        }
+
+        .choice-items:hover {
+            cursor: pointer;
+        }
+        .play-again {
+            display: none;
+            font-size: 20px;
+            border: 1px solid white;
+            padding: 20px 30px 20px 30px;
+            font-weight: 700;
+            border-radius: 50px;
+            background-color: white;
+            color: black;
+        }
+        .play-again:hover {
+            cursor: pointer;
+        }        
+    </style>
+</head>
+
+<body>
+    <div class="fpage">
+        <div class="fpage-items first-cont">
+            <img class="logo" src="./Photos/logo.png" alt="">
+        </div>
+        <div class="fpage-items sec-cont">
+            <h1>Enter your NAME to start the GAME</h1>
+            <div class="name-submission">
+                <input id="input" placeholder="Name" type="text" name="">
+                <button class="start-btn">Start</button>
+            </div>
+            <p class="required" style="color: red; display: none; margin-top: 10px;">Enter your name*</p>
+        </div>
+        <div class="fpage-items third-cont">
+            <div class="third-cont-items match">
+                <div class="match-items blue">
+
+                    <div class="blue-items user-name"></div>
+                    <div class="blue-items cont1">
+                        <img id="blue" class="result" src="" alt="">
+                    </div>
+                </div>
+                <div class="match-items mid">
+                    <h2 class="user-name rounds">Round 1</h2>
+                    <img id="vs" src="./Photos/vs.png" alt="vs">
+                    <h1 class="decision"></h1>
+                </div>
+                <div class="match-items red">
+                    <div class="blue-items user-name computer-score">Computer </div>
+                    <div class="blue-items cont2">
+                        <img id="red" class="result" src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="third-cont-items choices">
+                <div class="third-cont-items choices tbv">
+                    <div class="temp">
+                        <img id="1" class="choice-items" src="./Photos/rock.png" alt="">
+                        <p class="title">Rock</p>
+                    </div>
+                    <div class="temp">
+                        <img id="2" class="choice-items" src="./Photos/paper.png" alt="">
+                        <p class="title">Paper</p>
+                    </div>
+                    <div class="temp">
+                        <img id="3" class="choice-items" src="./Photos/scissor.png" alt="">
+                        <p class="title">Scissor</p>
+                    </div>
+                </div>
+                <button class="play-again">Play again</button>
+                
+
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    </bod>
+</body>
+
+</html>
