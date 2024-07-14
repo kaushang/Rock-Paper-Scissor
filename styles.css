@@ -285,7 +285,7 @@ img {
     }
 
     .choices {
-        height: 12%;
+        height: 8%;
     }
 
     .result {
@@ -295,6 +295,7 @@ img {
 
     .choose {
         margin-top:20px;
+        margin-bottom: 20px;
         font-size: 14px;
     }
 
