@@ -48,7 +48,6 @@ ref.addEventListener('click', () => {
 function display(event) {
     // Random number generation
     let rand = randomNumber(1, 4);
-    console.log(rand);
 
     // Gets ID of choice choosen
     let targetId = event.target.getAttribute("id");
@@ -112,6 +111,9 @@ function display(event) {
             dec.textContent = "MATCH DRAW";
         }
         
+        // Removing Choose
+        document.querySelector(".choose").style.display = "none";
+
         // Removing some things and Displaying some things
         let term = document.querySelector(".tbv");
         let gen = document.querySelector(".play-again");
@@ -124,7 +126,9 @@ function display(event) {
 
     // Updation of the round number
     let roundUpdate = document.querySelector(".rounds");
-    roundUpdate.textContent = "Round " + rounds; // 2
+    let roundUpdate2 = document.querySelector("#mround");
+    roundUpdate.textContent = "Round " + rounds;
+    roundUpdate2.textContent = "Round " + rounds;
 }
 // Choice selection
 let choice = document.querySelectorAll(".choice-items");
