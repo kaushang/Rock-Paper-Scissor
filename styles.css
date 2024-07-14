@@ -285,7 +285,7 @@ img {
     }
 
     .choices {
-        height: 8%;
+        height: 12%;
     }
 
     .result {
@@ -308,7 +308,7 @@ img {
     }
 
     .match-items {
-        width: 70%;
+        width: 100%;
     }
 
     .blue,
@@ -322,7 +322,8 @@ img {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 40%;
+        height: 55%;
+        width: 100%;
         flex-grow: 3;
     }
 
@@ -339,8 +340,8 @@ img {
 
     #mround {
         width: fit-content;
-        font-size: 14px;
         margin-bottom: 20px;
+        font-size: 14px;
         border: 1px solid white;
         padding: 8px 15px 8px 15px;
         font-weight: 700;
