@@ -8,7 +8,7 @@
     color: white;
 }
 .fpage {
-    height: 92vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -76,7 +76,7 @@
 
 .third-cont {
     display: none;
-    height: 80vh;
+    height: 85vh;
     flex-direction: column;
 }
 
@@ -231,8 +231,8 @@ img {
         height: 12%;
     }
     .logo {
-        width: 280px;
-        height: 280px;
+        width: 80px;
+        height: 80px;
     }
 
     #head, #nround {
@@ -241,49 +241,51 @@ img {
 
     .resp {
         display: block;
+        font-size: 26px;
         margin-top: 200px;
     }
 
     #input {
-        height: 70px;
-        width: 320px;
+        height: 36px;
+        width: 140px;
         border-radius: 50px 0px 0px 50px;
         margin: 50px 0px 0px 0px;
-        font-size: 35px;
+        font-size: 14px;
     }
 
     ::placeholder, .required {
-        font-size: 28px;
+        font-size: 18px;
     }
 
     .start-btn {
         border-radius: 0px 50px 50px 0px;
-        height: 70px;
-        width: 120px;
-        font-size: 35px;
-        border: 3px solid white;
+        height: 36px;
+        width: 65px;
+        font-size: 14px;
+        border: 2px solid white;
     }
 
     .choices {
-        height: 15%;
+        height: 12%;
     }
 
     .result {
-        height: 200px;
-        width: 200px;
+        height: 50px;
+        width:  50px;
     }
 
     .choose {
-        margin-top: 55px;
-        font-size: 38px;
+        margin-top:20px;
+        margin-bottom: 20px;
+        font-size: 14px;
     }
 
     .choice-items {
-        height: 180px;
-        width: 180px;
-        margin: 0px 40px 40px 40px;
-        border-radius: 66px;
-        padding: 25px;
+        height: 40px;
+        width: 40px;
+        margin: 0px 10px 25px 10px;
+        border-radius: 16px;
+        padding: 10px;
     }
 
     .match-items {
@@ -293,7 +295,7 @@ img {
     .blue,
     .red {
         align-items: center;
-        height: 35%;
+        height: 45%;
     }
 
     .match {
@@ -307,7 +309,7 @@ img {
 
 
     .title {
-        font-size: 34px;
+        font-size: 12px;
     }
 
     .media-round {
@@ -318,10 +320,9 @@ img {
 
     #mround {
         width: fit-content;
-        margin: 10px;
-        font-size: 34px;
+        font-size: 10px;
         border: 1px solid white;
-        padding: 20px 20px 20px 20px;
+        padding: 8px 15px 8px 15px;
         font-weight: 700;
         border-radius: 50px;
         background-color: white;
@@ -334,28 +335,36 @@ img {
     }
 
     #vs {
-        height: 120px;
-        width: 120px;
-        margin-top: 140px;
+        height: 45px;
+        width: 45px;
+        margin-top: 40px;
     }
 
     .cont1,
     .cont2 {
+        border-radius: 28px;
         height: 80%;
-        width: 55%;
+        width: 45%;
     }
 
-    .user-name, .play-again {
-        font-size: 40px;
+    .user-name {
+        margin: 8px;
+        font-size: 14px;
     }
-
+    .play-again {
+        font-size: 12px;
+        padding: 10px 15px 10px 15px;
+        font-weight: 700;
+        border-radius: 50px;
+        background-color: white;
+        color: black;
+    }
     .decision {
-        margin: 80px;
-        font-size: 54px;
+        margin: 20px;
+        font-size: 24px;
     }
     .sec-cont {
         justify-content: start;
         height: 80%;
     }
-
 }
