@@ -8,6 +8,7 @@ function start() {
     secondContainer.style.display = 'none';
     mainContainer.style.height = '100vh';
     thirdContainer.style.display = 'flex';
+    document.querySelector("#rps-head").style.display = "none";
 }
 function check(e) {
     let userInput = document.getElementById("input").value;
