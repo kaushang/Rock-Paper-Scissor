@@ -289,8 +289,8 @@ img {
     }
 
     .result {
-        height: 50px;
-        width:  50px;
+        height: 70px;
+        width:  70px;
     }
 
     .choose {
@@ -300,8 +300,8 @@ img {
     }
 
     .choice-items {
-        height: 40px;
-        width: 40px;
+        height: 60px;
+        width: 60px;
         margin: 0px 10px 25px 10px;
         border-radius: 16px;
         padding: 10px;
@@ -362,8 +362,8 @@ img {
     .cont1,
     .cont2 {
         border-radius: 28px;
-        height: 80%;
-        width: 45%;
+        height: 160px;
+        width: 160px;
     }
 
     .user-name {
