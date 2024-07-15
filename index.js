@@ -46,9 +46,29 @@ ref.addEventListener('click', () => {
     location.reload();
 })
 
+let temp = -1;
+let count = 1;
 function display(event) {
     // Random number generation
     let rand = randomNumber(1, 4);
+
+    // Ensure that computer doesn't generate same choice more than twice
+    if (rand === temp) {
+        if (count === 2) {
+            while (rand === temp) {
+                rand = randomNumber(1, 4);
+            }
+            temp = rand;
+            count = 1;
+        }
+        else {
+            count++;
+        }
+    }
+    else {
+        temp = rand;
+        count = 1;
+    }
 
     // Gets ID of choice choosen
     let targetId = event.target.getAttribute("id");
@@ -94,7 +114,7 @@ function display(event) {
         rounds++;
     }
 
-    if (rounds == 8) {
+    if (rounds == 7) {
         // Removing the vs logo
         let vs = document.querySelector("#vs");
         vs.style.display = "none";
