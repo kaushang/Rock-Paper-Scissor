@@ -125,13 +125,10 @@ function display(event) {
         if (userScore > computerScore) {
             dec.textContent = userInput + " WON!";
         }
-        else if (userScore < computerScore) {
+        else {
             dec.textContent = "Computer WON!";
         }
-        else {
-            dec.textContent = "MATCH DRAW";
-        }
-        
+        dec.style.display = "block";
         // Removing Choose
         document.querySelector(".choose").style.display = "none";
 
@@ -150,6 +147,17 @@ function display(event) {
     let roundUpdate2 = document.querySelector("#mround");
     roundUpdate.textContent = "Round " + rounds;
     roundUpdate2.textContent = "Round " + rounds;
+
+    if (rounds === 7) {
+        roundUpdate.style.backgroundColor = "rgb(150, 0, 0)";
+        roundUpdate2.style.backgroundColor = "rgb(150, 0, 0)";
+        roundUpdate.style.border = "rgb(150, 0, 0)";
+        roundUpdate2.style.border = "rgb(150, 0, 0)";
+        roundUpdate.style.color = "rgb(255, 255, 255)";
+        roundUpdate2.style.color = "rgb(255, 255, 255)";
+        roundUpdate.textContent = "Last Round!";
+        roundUpdate2.textContent = "Last Round!";
+    }
 }
 // Choice selection
 let choice = document.querySelectorAll(".choice-items");
