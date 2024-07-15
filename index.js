@@ -114,7 +114,7 @@ function display(event) {
         rounds++;
     }
 
-    if (rounds == 7) {
+    if (rounds == 8) {
         // Removing the vs logo
         let vs = document.querySelector("#vs");
         vs.style.display = "none";
